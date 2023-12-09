@@ -11,7 +11,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  background-color: #61dafb;
-  //font-family: Inter;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  line-height: normal;
 }
 `
