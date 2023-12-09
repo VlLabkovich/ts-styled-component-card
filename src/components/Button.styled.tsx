@@ -1,27 +1,46 @@
-import styled from "styled-components";
-
+import styled, {css} from "styled-components";
 
 export const StyledBtnFlex = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  flex-wrap: wrap;
+  gap: 12px;
 `
 
 type StyledBtnPropsType = {
-    border?: string
     background: string
     color: string
-    margin?: string
-    marginl?: string
+    btnType: "primary" | "outlined"
 }
+
 export const StyledBtn = styled.button<StyledBtnPropsType>`
   width: 86px;
   height: 30px;
   color: ${props => props.color};
-  background-color: ${props => props.background};
   border-radius: 5px;
-  border: ${props => props.border};
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 700;
-  margin: ${props => props.margin};
+  flex-shrink: 0;
+  
+  // primary
+  ${props => props.btnType === "primary" && css<StyledBtnPropsType>`
+    background-color: ${props => props.background};
+    border: 0;
+
+    &:hover {
+      background-color: #64ce94;
+    }
+  `
+  };
+  // outlined
+  ${props => props.btnType === "outlined" && css<StyledBtnPropsType>`
+    background-color: ${props => props.background};
+    border: 2px solid #4E71FE;
+
+    &:hover {
+      border-color: #64ce94;
+      color: #64ce94;
+    }
+  `
+  };
 `
