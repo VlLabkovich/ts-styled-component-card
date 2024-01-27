@@ -8,7 +8,7 @@ export const StyledBtnFlex = styled.div`
 `
 
 type StyledBtnPropsType = {
-    btnType: "primary" | "outlined"
+    btnType: "primary" | "secondary"
 }
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
@@ -31,8 +31,8 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     `
     };
     
-    // outlined
-    ${props => props.btnType === "outlined" && css<StyledBtnPropsType>`
+    // secondary
+    ${props => props.btnType === "secondary" && css<StyledBtnPropsType>`
         background-color: #FFF;
         color: #4E71FE;
         border: 2px solid #4E71FE;

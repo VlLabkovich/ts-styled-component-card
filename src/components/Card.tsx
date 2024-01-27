@@ -19,7 +19,7 @@ export const Card = (props: CardPropsType) => {
             <StyledText>{props.text}</StyledText>
             <StyledBtnFlex>
                 <StyledBtn btnType={"primary"}>See more</StyledBtn>
-                <StyledBtn btnType={"outlined"}>Save</StyledBtn>
+                <StyledBtn btnType={"secondary"}>Save</StyledBtn>
             </StyledBtnFlex>
         </StyledCard>
     );
